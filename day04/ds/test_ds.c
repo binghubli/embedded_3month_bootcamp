@@ -3,11 +3,11 @@
 #include "stack.h"
 #include "queue.h"
 
-//测试单链表
+// 测试单链表
 void test_slist(void)
 {
     printf("==== 测试单链表 ====\n");
-    SingleNode *head = NULL;
+    SingleNode* head = NULL;
     slist_add_head(&head, 1);
     slist_add_head(&head, 2);
     slist_add_head(&head, 3);
@@ -27,19 +27,19 @@ void test_slist(void)
     slist_destroy(&head);
 }
 
-//测试栈
+// 测试栈
 void test_stack(void)
 {
     printf("==== 测试栈 ====\n");
     Stack stk;
     stack_init(&stk);
-    
+
     stack_push(&stk, 100);
     stack_push(&stk, 200);
     stack_push(&stk, 300);
 
     int val;
-    while(!stack_empty(&stk))
+    while (!stack_empty(&stk))
     {
         stack_pop(&stk, &val);
         printf("%d ", val);
@@ -49,7 +49,7 @@ void test_stack(void)
     stack_destroy(&stk);
 }
 
-//测试队列
+// 测试队列
 void test_queue(void)
 {
     printf("==== 测试队列 ====\n");
@@ -61,7 +61,7 @@ void test_queue(void)
     queue_enqueue(&q, 33);
 
     int val;
-    while(!queue_empty(&q))
+    while (!queue_empty(&q))
     {
         queue_dequeue(&q, &val);
         printf("%d ", val);

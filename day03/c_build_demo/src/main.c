@@ -10,7 +10,7 @@ int main(void)
     log_info("Program start");
 
     ret = calc_add(10, 20, &val);
-    if(ret == RET_OK)
+    if (ret == RET_OK)
     {
         printf("10 + 20 = %d\n", val);
     }
@@ -20,7 +20,7 @@ int main(void)
     }
 
     ret = calc_sub(50, 15, &val);
-        if(ret == RET_OK)
+    if (ret == RET_OK)
     {
         printf("50 - 15 = %d\n", val);
     }
